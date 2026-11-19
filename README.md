@@ -8,8 +8,9 @@ GitHub Pages: **Settings → Pages → Deploy from a branch → `main` / `(root)
 
 ## Estructura
 
-- `index.html`: el visor. Al principio del `<script>` está el bloque `CONFIGURACIÓN` (título de la pestaña, número de páginas, carpeta y extensión).
+- `index.html`: el visor. Al principio del `<script>` está el bloque `CONFIGURACIÓN` (título de la pestaña, número de páginas, carpeta, extensión y archivo de descarga).
 - `paginas/001.webp … 048.webp`: las 48 páginas, renderizadas desde el PDF a 3000 px de ancho.
+- `MOON64-Dossier.pdf`: el dossier completo que descarga el botón «Descargar dossier» (la misma versión que las páginas, ajustada al tamaño final sin sangrado).
 - `libs/page-flip.browser.js`: librería de efecto libro ([StPageFlip](https://github.com/Nodlik/StPageFlip), MIT).
 
 ## Controles
@@ -20,6 +21,8 @@ Clic o arrastre en una página o esquina, deslizar en móvil, flechas ← →, `
 
 Sustituye los archivos de `paginas/` conservando los nombres (`001.webp`…). Si cambia el número de páginas, actualiza `total` en `index.html` (ahora 48). La portada (001) y la contraportada (la última) son las páginas rígidas. Para que las dobles páginas sigan emparejadas, mantén un número par de páginas.
 
+Cuando cambie el PDF, sustituye también `MOON64-Dossier.pdf` conservando el nombre, para que el botón de descarga entregue la misma versión que se ve en el visor. Para quitar el botón, deja `download` vacío en `index.html`.
+
 ## Nota
 
-El repositorio es público, así que las imágenes de las páginas también lo son.
+El repositorio es público, así que las imágenes de las páginas y el PDF de descarga también lo son.
